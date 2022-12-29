@@ -38,6 +38,17 @@ except NoSuchElementException:
 
 # ----------------------------------------------------------SearchBar----------------------------------------------------------
 
+# ----------------------------------------------------------Group Bar----------------------------------------------------------
+
+try:
+    searchbar = driver.find_element(By.CLASS_NAME, 'k-grouping-header')
+    print(Fore.GREEN+'Group bar Present')
+    print(Fore.RESET)
+except NoSuchElementException:
+    print(Fore.RED+'Group bar Missing')
+    print(Fore.RESET)
+# ----------------------------------------------------------Group Bar----------------------------------------------------------
+
 # ----------------------------------------------------------C.R.U.D----------------------------------------------------------
 print(Fore.BLUE+'C.R.U.D Icons Test started')
 
