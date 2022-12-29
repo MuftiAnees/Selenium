@@ -20,10 +20,12 @@ print(Fore.RESET)
 sleep(2)
 
 # ----------------------------------------------------------SearchBar----------------------------------------------------------
+MandatorySearchBar = 0
 try:
     searchbar = driver.find_element(By.ID, 'st')
     print(Fore.GREEN+'Searchbar Present')
     print(Fore.RESET)
+    MandatorySearchBar += 1
 except NoSuchElementException:
     print(Fore.RED+'Searchbar Missing')
     print(Fore.RESET)
@@ -32,6 +34,7 @@ try:
     searchbar = driver.find_element(By.XPATH, '//*[@title="Reset"]')
     print(Fore.GREEN+'Searchbar Reset Button Present')
     print(Fore.RESET)
+    MandatorySearchBar += 1
 except NoSuchElementException:
     print(Fore.RED+'Searchbar Reset Button Missing')
     print(Fore.RESET)
@@ -44,6 +47,7 @@ try:
     searchbar = driver.find_element(By.CLASS_NAME, 'k-grouping-header')
     print(Fore.GREEN+'Group bar Present')
     print(Fore.RESET)
+    MandatoryGroup = 1
 except NoSuchElementException:
     print(Fore.RED+'Group bar Missing')
     print(Fore.RESET)
@@ -51,7 +55,7 @@ except NoSuchElementException:
 
 # ----------------------------------------------------------C.R.U.D----------------------------------------------------------
 print(Fore.BLUE+'C.R.U.D Icons Test started')
-
+MandatoryCRUD = 0
 
 # ----------------------------------------------------------Reset State----------------------------------------------------------
 
@@ -59,6 +63,7 @@ try:
     searchbar = driver.find_element(By.ID, 'reloadGridState')
     print(Fore.GREEN+'Reset State Button Present')
     print(Fore.RESET)
+    MandatoryCRUD += 1
 
 except NoSuchElementException:
     print(Fore.RED+'Reset State Button Missing')
@@ -78,6 +83,8 @@ try:
     searchbar = driver.find_element(By.XPATH, '//*[@title="Save State"]')
     print(Fore.GREEN+'Save State Button Present')
     print(Fore.RESET)
+    MandatoryCRUD += 1
+
 except NoSuchElementException:
     print(Fore.RED+'Save State Button Missing')
     print(Fore.RESET)
@@ -88,6 +95,8 @@ try:
     searchbar = driver.find_element(By.XPATH, '//*[@title="Load State"]')
     print(Fore.GREEN+'Load State Button Present')
     print(Fore.RESET)
+    MandatoryCRUD += 1
+
 except NoSuchElementException:
     print(Fore.RED+'Load State Button Missing')
     print(Fore.RESET)
@@ -107,6 +116,8 @@ try:
     searchbar = driver.find_element(By.XPATH, '//*[@title="Dormant"]')
     print(Fore.GREEN+'Dormant Button Present')
     print(Fore.RESET)
+    MandatoryCRUD += 1
+
 except NoSuchElementException:
     print(Fore.RED+'Dormant Button Missing')
     print(Fore.RESET)
@@ -127,6 +138,31 @@ except NoSuchElementException:
     print(Fore.RED+'Delete Button Missing')
     print(Fore.RESET)
 # ----------------------------------------------------------Delete----------------------------------------------------------
+print(Fore.CYAN+'Final Result:')
+print(Fore.RESET)
+
+if MandatoryCRUD < 4:
+    print(Fore.RED+'C.R.U.D Test Failed')
+    print(Fore.RESET)
+else:
+    print(Fore.GREEN+'C.R.U.D Test Passed')
+    print(Fore.RESET)
+
+
+if MandatorySearchBar == 2:
+    print(Fore.GREEN+'Searchbar Test Passed')
+    print(Fore.RESET)
+else:
+    print(Fore.RED+'Searchbar Test Failed')
+    print(Fore.RESET)
+
+if MandatoryGroup == 1:
+    print(Fore.GREEN+'Group Test Passed')
+    print(Fore.RESET)
+else:
+    print(Fore.RED+'Group Test Failed')
+    print(Fore.RESET)
+
 
 print(Fore.CYAN+'Test Completed')
 print(Fore.RESET)
