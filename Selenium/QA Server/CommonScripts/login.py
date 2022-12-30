@@ -14,7 +14,7 @@ def login():
     search = driver.find_element(By.ID, "j_username")
     search.send_keys("admin")
     search = driver.find_element(By.ID, "j_password")
-    search.send_keys("Tomcat@123")
+    search.send_keys("CareKamra@2022")
     search = driver.find_element(By.NAME, "submit").click()
     print("Login Successful!")
     sleep(2)
