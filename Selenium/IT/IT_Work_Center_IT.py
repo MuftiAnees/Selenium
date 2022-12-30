@@ -9,8 +9,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 PATH = "D:\Coding\Python\Selenium\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
-
-
+driver.maximize_window()
 driver.get("http://172.16.10.4:8082/jw/web/login")
 sleep(2)
 search = driver.find_element(By.ID, "j_username")
@@ -22,5 +21,5 @@ search = driver.find_element(By.NAME, "submit").click()
 # sleep(2)
 
 driver.get(
-    "http://172.16.10.4:8082/jw/web/userview/pac_IT/pac_IT_UV/_/C8F5DC67202C40858B66764F9A71C78B")
+    "http://172.16.10.4:8082/jw/web/userview/pac_IT/pac_IT_UV/_/itEquipmentUpgradCrud")
 sleep(4000)
