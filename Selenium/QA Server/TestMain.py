@@ -139,9 +139,21 @@ except NoSuchElementException:
     print(Fore.RESET)
 # ----------------------------------------------------------Delete----------------------------------------------------------
 
+# ----------------------------------------------------------Grid Entries----------------------------------------------------------
+
+try:
+    searchbar = driver.find_element(
+        By.XPATH, '//*[@text="No items to display"]')
+    print(Fore.GREEN+'Grid Items Present')
+    print(Fore.RESET)
+except NoSuchElementException:
+    print(Fore.RED+'GRID EMPTY!!')
+    print(Fore.RESET)
+
 
 print(Fore.CYAN+'Form Manipulation Buttons')
 print(Fore.RESET)
+# ----------------------------------------------------------Grid Entries----------------------------------------------------------
 
 # ----------------------------------------------------------Edit----------------------------------------------------------
 
