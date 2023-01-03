@@ -138,6 +138,36 @@ except NoSuchElementException:
     print(Fore.RED+'Delete Button Missing')
     print(Fore.RESET)
 # ----------------------------------------------------------Delete----------------------------------------------------------
+
+
+print(Fore.CYAN+'Form Manipulation Buttons')
+print(Fore.RESET)
+
+# ----------------------------------------------------------Edit----------------------------------------------------------
+
+try:
+    formEdit = driver.find_element(
+        By.CLASS_NAME, "k-button k-button-icontext Edit k-grid-Edit")
+    print(Fore.GREEN+'Form Edit Button Present')
+    print(Fore.RESET)
+except NoSuchElementException:
+    print(Fore.RED+'Form Edit Button Missing')
+    print(Fore.RESET)
+# ----------------------------------------------------------Edit----------------------------------------------------------
+
+
+# ----------------------------------------------------------Status Update----------------------------------------------------------
+
+try:
+    formEdit = driver.find_element(
+        By.CLASS_NAME, "k-button k-button-icontext Status-Update k-grid-StatusUpdate")
+    print(Fore.GREEN+'Status Update Button Present')
+    print(Fore.RESET)
+except NoSuchElementException:
+    print(Fore.RED+'Status Update Button Missing')
+    print(Fore.RESET)
+# ----------------------------------------------------------Status update----------------------------------------------------------
+
 print(Fore.CYAN+'Final Result:')
 print(Fore.RESET)
 
