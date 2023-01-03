@@ -151,7 +151,7 @@ try:
     print(Fore.GREEN+'Form Edit Button Present')
     print(Fore.RESET)
 except NoSuchElementException:
-    print(Fore.RED+'Form Edit Button Missing')
+    print(Fore.YELLOW+'Form Edit Button Missing')
     print(Fore.RESET)
 # ----------------------------------------------------------Edit----------------------------------------------------------
 
@@ -164,9 +164,21 @@ try:
     print(Fore.GREEN+'Status Update Button Present')
     print(Fore.RESET)
 except NoSuchElementException:
-    print(Fore.RED+'Status Update Button Missing')
+    print(Fore.YELLOW+'Status Update Button Missing')
     print(Fore.RESET)
 # ----------------------------------------------------------Status update----------------------------------------------------------
+
+# ----------------------------------------------------------View----------------------------------------------------------
+
+try:
+    formEdit = driver.find_element(
+        By.CLASS_NAME, "k-button k-button-icontext View k-grid-View")
+    print(Fore.GREEN+'View Button Present')
+    print(Fore.RESET)
+except NoSuchElementException:
+    print(Fore.YELLOW+'View Button Missing')
+    print(Fore.RESET)
+# ----------------------------------------------------------View----------------------------------------------------------
 
 print(Fore.CYAN+'Final Result:')
 print(Fore.RESET)
