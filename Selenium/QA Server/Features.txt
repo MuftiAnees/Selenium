@@ -1,2 +1,1 @@
-check if there is data inside a grid if empty give warning of empty grid.
 check print button to tell about jasper availability.
