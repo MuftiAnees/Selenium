@@ -14,7 +14,8 @@ os.system('cls')
 print(Fore.GREEN+'Test Started!')
 print(Fore.RESET)
 
-driver.get("http://172.16.10.4:8082/jw/web/userview/HRMAttendanceMOdule/hrmUserview/_/automatedAttendanceCrud")
+driver.get(
+    "http://172.16.10.4:8082/jw/web/userview/TADA/tadaApp/_/5D36F534B8E542C8AE5B96DE021C55AE")
 print(Fore.YELLOW+driver.title)
 print(Fore.RESET)
 sleep(2)
@@ -140,14 +141,14 @@ except NoSuchElementException:
 # ----------------------------------------------------------Delete----------------------------------------------------------
 
 # ----------------------------------------------------------Grid Entries----------------------------------------------------------
-
+sleep(5)
 try:
     searchbar = driver.find_element(
         By.XPATH, '//*[@text="No items to display"]')
-    print(Fore.GREEN+'Grid Items Present')
+    print(Fore.RED+'GRID EMPTY!!!')
     print(Fore.RESET)
 except NoSuchElementException:
-    print(Fore.RED+'GRID EMPTY!!')
+    print(Fore.GREEN+'Grid Items Present')
     print(Fore.RESET)
 
 
