@@ -112,6 +112,16 @@ except NoSuchElementException:
     print(Fore.RESET)
 # ----------------------------------------------------------Add----------------------------------------------------------
 
+# ----------------------------------------------------------Add2----------------------------------------------------------
+try:
+    searchbar = driver.find_element(By.XPATH, '//*[@title="add"]')
+    print(Fore.GREEN+'Add Button Present')
+    print(Fore.RESET)
+except NoSuchElementException:
+    print(Fore.RED+'Add Button Missing')
+    print(Fore.RESET)
+# ----------------------------------------------------------Add2----------------------------------------------------------
+
 # ----------------------------------------------------------Dormant----------------------------------------------------------
 try:
     searchbar = driver.find_element(By.XPATH, '//*[@title="Dormant"]')
@@ -123,13 +133,7 @@ except NoSuchElementException:
     print(Fore.RED+'Dormant Button Missing')
     print(Fore.RESET)
 # ----------------------------------------------------------Dormant----------------------------------------------------------
-try:
-    searchbar = driver.find_element(By.XPATH, '//*[@title="Dormant"]')
-    print(Fore.GREEN+'Dormant Button Present')
-    print(Fore.RESET)
-except NoSuchElementException:
-    print(Fore.RED+'Dormant Button Missing')
-    print(Fore.RESET)
+
 # ----------------------------------------------------------Delete----------------------------------------------------------
 try:
     searchbar = driver.find_element(By.XPATH, '//*[@title="Delete"]')
