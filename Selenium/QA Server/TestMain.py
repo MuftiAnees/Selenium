@@ -9,6 +9,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 PATH = "D:\Coding\Python\Selenium\chromedriver.exe"
 
+driver.maximize_window()
 login()
 os.system('cls')
 print(Fore.GREEN+'Test Started!')
