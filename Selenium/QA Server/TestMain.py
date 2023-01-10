@@ -43,7 +43,7 @@ except NoSuchElementException:
 # ----------------------------------------------------------SearchBar----------------------------------------------------------
 
 # ----------------------------------------------------------Group Bar----------------------------------------------------------
-
+MandatoryGroup = 0
 try:
     searchbar = driver.find_element(By.CLASS_NAME, 'k-grouping-header')
     print(Fore.GREEN+'Group bar Present')
