@@ -113,25 +113,25 @@ while linkNumber != total_number_of_links:
         print(Fore.RESET)
     # ----------------------------------------------------------Load State----------------------------------------------------------
     # ----------------------------------------------------------Add----------------------------------------------------------
+    add_count = 0
     try:
         searchbar = driver.find_element(By.XPATH, '//*[@title="Add"]')
-        print(Fore.GREEN+'Add Button Present')
-        print(Fore.RESET)
+        add_count += 1
     except NoSuchElementException:
-        print(Fore.RED+'Add Button Missing')
-        print(Fore.RESET)
-    # ----------------------------------------------------------Add----------------------------------------------------------
+        add_count += 0
 
-    # ----------------------------------------------------------Add2----------------------------------------------------------
     try:
         searchbar = driver.find_element(By.XPATH, '//*[@title="add"]')
+        add_count += 1
+    except NoSuchElementException:
+        add_count += 0
+    # ----------------------------------------------------------Add----------------------------------------------------------
+    if add_count == 1:
         print(Fore.GREEN+'Add Button Present')
         print(Fore.RESET)
-    except NoSuchElementException:
+    else:
         print(Fore.RED+'Add Button Missing')
         print(Fore.RESET)
-    # ----------------------------------------------------------Add2----------------------------------------------------------
-
     # ----------------------------------------------------------Dormant----------------------------------------------------------
     try:
         searchbar = driver.find_element(By.XPATH, '//*[@title="Dormant"]')
