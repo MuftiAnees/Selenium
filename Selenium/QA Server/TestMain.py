@@ -154,21 +154,6 @@ while linkNumber != total_number_of_links:
         print(Fore.RESET)
     # ----------------------------------------------------------Delete----------------------------------------------------------
 
-    # ----------------------------------------------------------Grid Entries----------------------------------------------------------
-    # sleep(5)
-    # try:
-    #     searchbar = driver.find_element(
-    #         By.XPATH, '//*[@text="No items to display"]')
-    #     print(Fore.RED+'GRID EMPTY!!!')
-    #     print(Fore.RESET)
-    # except NoSuchElementException:
-    #     print(Fore.GREEN+'Grid Items Present')
-    #     print(Fore.RESET)
-
-    # print(Fore.CYAN+'Form Manipulation Buttons')
-    # print(Fore.RESET)
-    # ----------------------------------------------------------Grid Entries----------------------------------------------------------
-
     # ----------------------------------------------------------Edit----------------------------------------------------------
 
     try:
