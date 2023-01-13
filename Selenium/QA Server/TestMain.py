@@ -12,7 +12,7 @@ PATH = "D:\Coding\Python\Selenium\chromedriver.exe"
 driver.maximize_window()
 login()
 os.system('cls')
-print(Fore.GREEN+'Test Started!')
+print(Fore.GREEN+'------------------------------------------------------------Test Started!------------------------------------------------------------')
 print(Fore.RESET)
 
 links = ["http://172.16.10.4:8082/jw/web/userview/overtimeAllowance/overtimeallowanceUV/_/standardHours",
@@ -155,18 +155,18 @@ while linkNumber != total_number_of_links:
     # ----------------------------------------------------------Delete----------------------------------------------------------
 
     # ----------------------------------------------------------Grid Entries----------------------------------------------------------
-    sleep(5)
-    try:
-        searchbar = driver.find_element(
-            By.XPATH, '//*[@text="No items to display"]')
-        print(Fore.RED+'GRID EMPTY!!!')
-        print(Fore.RESET)
-    except NoSuchElementException:
-        print(Fore.GREEN+'Grid Items Present')
-        print(Fore.RESET)
+    # sleep(5)
+    # try:
+    #     searchbar = driver.find_element(
+    #         By.XPATH, '//*[@text="No items to display"]')
+    #     print(Fore.RED+'GRID EMPTY!!!')
+    #     print(Fore.RESET)
+    # except NoSuchElementException:
+    #     print(Fore.GREEN+'Grid Items Present')
+    #     print(Fore.RESET)
 
-    print(Fore.CYAN+'Form Manipulation Buttons')
-    print(Fore.RESET)
+    # print(Fore.CYAN+'Form Manipulation Buttons')
+    # print(Fore.RESET)
     # ----------------------------------------------------------Grid Entries----------------------------------------------------------
 
     # ----------------------------------------------------------Edit----------------------------------------------------------
@@ -204,6 +204,17 @@ while linkNumber != total_number_of_links:
         print(Fore.YELLOW+'View Button Missing')
         print(Fore.RESET)
     # ----------------------------------------------------------View----------------------------------------------------------
+    # ----------------------------------------------------------Grid----------------------------------------------------------
+    sleep(5)
+    try:
+        searchbar = driver.find_element(By.CSS_SELECTOR, '[role="gridcell"]')
+        print(Fore.GREEN+'Grid data present')
+        print(Fore.RESET)
+        MandatoryGroup = 1
+    except NoSuchElementException:
+        print(Fore.RED+'Grid is empty!')
+        print(Fore.RESET)
+# ----------------------------------------------------------Grid----------------------------------------------------------
 
     print(Fore.CYAN+'Final Result:')
     print(Fore.RESET)
