@@ -9,3 +9,6 @@
 7. [x] Link to add values in a word file using Python: https://python-docx.readthedocs.io/en/latest/
 8. [x] Fix Grid element count error
 9. [ ] Add logic of point 3 to all elements
+10. [ ] Add grid buttons from payroll system
+11. [ ] Add disabled states for the elements as well
+12. [ ] Seperate Important and un important elements from grid buttons, as it is becoming too congested

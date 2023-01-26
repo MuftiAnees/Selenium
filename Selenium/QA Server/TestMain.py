@@ -19,8 +19,8 @@ links = ["http://172.16.10.4:8082/jw/web/userview/overtimeAllowance/overtimeallo
          "http://172.16.10.4:8082/jw/web/userview/overtimeAllowance/overtimeallowanceUV/_/rateConfig",
          "http://172.16.10.4:8082/jw/web/userview/overtimeAllowance/overtimeallowanceUV/_/Monthly",
          "http://172.16.10.4:8082/jw/web/userview/overtimeAllowance/overtimeallowanceUV/_/generatedPerformaCrud",
-         "http://172.16.10.4:8082/jw/web/userview/overtimeAllowance/overtimeallowanceUV/_/hrmCrud",
-         "http://172.16.10.4:8082/jw/web/userview/overtimeAllowance/overtimeallowanceUV/_/icPayCrud",
+         "http://172.16.10.4:8082/jw/web/userview/payrollManagementArf/acc_finan_uv/_/uBillDetail",
+         "http://172.16.10.4:8082/jw/web/userview/payrollManagementArf/acc_finan_uv/_/monthlySalaryUv",
          "http://172.16.10.4:8082/jw/web/userview/payrollManagementArf/acc_finan_ela_uv/_/advancesUserview"]
 total_number_of_links = len(links)
 linkNumber = 0
@@ -157,6 +157,78 @@ while linkNumber != total_number_of_links:
     # ----------------------------------------------------------GRID TESTING----------------------------------------------------------
     print(Fore.BLUE+'Grid Testing')
     print(Fore.RESET)
+
+    # ----------------------------------------------------------Grid Entries----------------------------------------------------------
+    sleep(5)
+    try:
+        searchbar = driver.find_element(By.CSS_SELECTOR, '[role="gridcell"]')
+        print(Fore.GREEN+'Grid data present')
+        print(Fore.RESET)
+        MandatoryGroup = 1
+    except NoSuchElementException:
+        print(Fore.RED+'Grid is empty!')
+        print(Fore.RESET)
+    # ----------------------------------------------------------Grid Entries----------------------------------------------------------
+
+    # ----------------------------------------------------------UAGE----------------------------------------------------------
+
+    try:
+        formEdit = driver.find_element(
+            By.CLASS_NAME, "k-button.k-button-icontext.ADD-UAGE.k-grid-ADDUAGE")
+        print(Fore.GREEN+'UAGE Button Present')
+        print(Fore.RESET)
+    except NoSuchElementException:
+        print(Fore.YELLOW+'UAGE Button Missing')
+        print(Fore.RESET)
+    # ----------------------------------------------------------UAGE----------------------------------------------------------
+
+    # ----------------------------------------------------------Employee Sub Ledger----------------------------------------------------------
+
+    try:
+        formEdit = driver.find_element(
+            By.CLASS_NAME, "k-button.k-button-icontext.Employee-Sub-Ledger.k-grid-EmployeeSubLedger")
+        print(Fore.GREEN+'Employee Sub Ledger Button Present')
+        print(Fore.RESET)
+    except NoSuchElementException:
+        print(Fore.YELLOW+'Employee Sub Ledger Button Missing')
+        print(Fore.RESET)
+    # ----------------------------------------------------------Employee Sub Ledger----------------------------------------------------------
+    # ----------------------------------------------------------Detail Salary----------------------------------------------------------
+
+    try:
+        formEdit = driver.find_element(
+            By.CLASS_NAME, "k-button.k-button-icontext.Detail-Salary.k-grid-DetailSalary")
+        print(Fore.GREEN+'Detailed Salary Button Present')
+        print(Fore.RESET)
+    except NoSuchElementException:
+        print(Fore.YELLOW+'Detailed Salary Button Missing')
+        print(Fore.RESET)
+    # ----------------------------------------------------------Detail Salary----------------------------------------------------------
+
+    # ----------------------------------------------------------Form 38----------------------------------------------------------
+
+    try:
+        formEdit = driver.find_element(
+            By.CLASS_NAME, "k-button.k-button-icontext.Form-38.k-grid-Form38")
+        print(Fore.GREEN+'Form 38 Button Present')
+        print(Fore.RESET)
+    except NoSuchElementException:
+        print(Fore.YELLOW+'Form 38 Button Missing')
+        print(Fore.RESET)
+    # ----------------------------------------------------------Form 38----------------------------------------------------------
+
+    # ----------------------------------------------------------Pay Slip----------------------------------------------------------
+
+    try:
+        formEdit = driver.find_element(
+            By.CLASS_NAME, "k-button.k-button-icontext.Pay-Slip.k-grid-PaySlip")
+        print(Fore.GREEN+'Pay Slip Button Present')
+        print(Fore.RESET)
+    except NoSuchElementException:
+        print(Fore.YELLOW+'Pay Slip Button Missing')
+        print(Fore.RESET)
+    # ----------------------------------------------------------Pay Slip----------------------------------------------------------
+
     # ----------------------------------------------------------Edit----------------------------------------------------------
 
     try:
@@ -228,17 +300,7 @@ while linkNumber != total_number_of_links:
         print(Fore.YELLOW+'View Button Missing')
         print(Fore.RESET)
     # ----------------------------------------------------------View----------------------------------------------------------
-    # ----------------------------------------------------------Grid----------------------------------------------------------
-    sleep(5)
-    try:
-        searchbar = driver.find_element(By.CSS_SELECTOR, '[role="gridcell"]')
-        print(Fore.GREEN+'Grid data present')
-        print(Fore.RESET)
-        MandatoryGroup = 1
-    except NoSuchElementException:
-        print(Fore.RED+'Grid is empty!')
-        print(Fore.RESET)
-# ----------------------------------------------------------Grid----------------------------------------------------------
+
 
 # ----------------------------------------------------------GRID TESTING----------------------------------------------------------
 
