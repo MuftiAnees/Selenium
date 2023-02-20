@@ -12,3 +12,4 @@
 10. [ ] Add grid buttons from payroll system
 11. [ ] Add disabled states for the elements as well
 12. [ ] Seperate Important and un important elements from grid buttons, as it is becoming too congested
+13. [ ] Insert checks for "viewForm-body-header" (Main Title) and "runProcess-body-header"(Process Title)
